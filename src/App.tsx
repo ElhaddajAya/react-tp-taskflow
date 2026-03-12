@@ -75,10 +75,7 @@ function Dashboard() {
         />
 
         <div style={{ flex: 1, overflow: "auto" }}>
-          {/* ✅ Tooltip placé ici temporairement pour observer le flash — Partie 7 TP */}
           <Tooltip />
-
-          {/* Le contenu principal du board */}
           <MainContent columns={columns} />
         </div>
       </div>
