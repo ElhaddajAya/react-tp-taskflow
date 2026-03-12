@@ -1,0 +1,48 @@
+.form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input {
+  min-width: 220px;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid #d4d9e2;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1b8c3e;
+  box-shadow: 0 0 0 3px rgba(27, 140, 62, 0.2);
+}
+
+.colorPicker {
+  width: 40px;
+  height: 36px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.submit,
+.cancel {
+  padding: 0.55rem 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.submit {
+  background: #1b8c3e;
+  color: #fff;
+}
+
+.cancel {
+  background: #eceff3;
+  color: #223045;
+}
