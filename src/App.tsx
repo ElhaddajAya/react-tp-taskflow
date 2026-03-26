@@ -9,6 +9,8 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import ProjectDetail from "./pages/ProjectDetail";
 import ProtectedRoute from "./components/ProtectedRoute";
+import LoginMUI from "./features/auth/LoginMUI.tsx";
+import LoginBS from "./features/auth/LoginBS.tsx";
 
 interface Project {
   id: string;
@@ -27,7 +29,7 @@ export default function App() {
     <Routes>
       <Route
         path='/login'
-        element={<Login />}
+        element={<LoginBS />}
       />
       <Route
         path='/dashboard'

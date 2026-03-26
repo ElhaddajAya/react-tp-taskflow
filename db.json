@@ -19,6 +19,11 @@
       "id": "9295",
       "name": "Test Project",
       "color": "#1b8d8b"
+    },
+    {
+      "id": "9c56",
+      "name": "React Project",
+      "color": "#8d1b63"
     }
   ],
   "columns": [
