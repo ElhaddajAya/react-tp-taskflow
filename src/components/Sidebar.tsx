@@ -1,3 +1,4 @@
+import { memo } from "react";
 import styles from "./Sidebar.module.css";
 import { NavLink } from "react-router-dom";
 
@@ -12,13 +13,13 @@ interface SidebarProps {
   isOpen: boolean;
 }
 
-export default function Sidebar({ projects, isOpen }: SidebarProps) {
+function Sidebar({ projects, isOpen }: SidebarProps) {
+  console.log("Sidebar re-render"); // pour observer
   return (
     <aside
       className={`${styles.sidebar} ${isOpen ? styles.open : styles.closed}`}
     >
       <h2 className={styles.title}>Mes Projets</h2>
-
       <ul className={styles.list}>
         {projects.map((p) => (
           <li key={p.id}>
@@ -40,3 +41,5 @@ export default function Sidebar({ projects, isOpen }: SidebarProps) {
     </aside>
   );
 }
+
+export default memo(Sidebar);

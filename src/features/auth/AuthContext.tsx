@@ -1,7 +1,8 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import type { ReactNode } from "react";
 import { authReducer, initialState } from "./authReducer";
 import type { AuthState, AuthAction } from "./authReducer";
+import { setAuthToken } from "../../api/axios";
 
 interface AuthContextType {
   state: AuthState;
@@ -12,6 +13,12 @@ const AuthContext = createContext<AuthContextType | null>(null);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(authReducer, initialState);
+
+  // nouveau : synchronise le token Axios à chaque changement
+  useEffect(() => {
+    setAuthToken(state.token);
+  }, [state.token]);
+
   return (
     <AuthContext.Provider value={{ state, dispatch }}>
       {children}

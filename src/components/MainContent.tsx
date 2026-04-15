@@ -1,4 +1,6 @@
+import { memo } from "react";
 import styles from "./MainContent.module.css";
+
 interface Column {
   id: string;
   title: string;
@@ -7,7 +9,9 @@ interface Column {
 interface MainContentProps {
   columns: Column[];
 }
-export default function MainContent({ columns }: MainContentProps) {
+
+function MainContent({ columns }: MainContentProps) {
+  console.log("MainContent re-render"); // pour observer
   return (
     <main className={styles.main}>
       <div className={styles.board}>
@@ -33,3 +37,5 @@ export default function MainContent({ columns }: MainContentProps) {
     </main>
   );
 }
+
+export default memo(MainContent);

@@ -19,6 +19,16 @@
       "id": "9295",
       "name": "Test Project",
       "color": "#1b8d8b"
+    },
+    {
+      "id": "41f8",
+      "name": "Test 2",
+      "color": "#1b8c3e"
+    },
+    {
+      "id": "7886",
+      "name": "Test 3",
+      "color": "#ff00c8"
     }
   ],
   "columns": [
